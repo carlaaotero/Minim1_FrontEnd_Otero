@@ -1,8 +1,7 @@
+MÍNIM 1 - CARLA OTERO ROCA
 # StayCloseFrontEnd
 
-> Paginació funciona, pero no se'm mostren els butons de les pagines.
 
-> Afegit un selector de elements per pagina.
 
 
 ----------------------------------------------------------
@@ -20,5 +19,5 @@ Instal·lar Angular CLI (versió 18)
 
 > ng serve -o
 
-Versió 1: Inicialitzat el projecte en Angular.
+
 

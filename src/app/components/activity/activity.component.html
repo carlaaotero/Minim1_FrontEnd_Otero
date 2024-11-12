@@ -1,0 +1,31 @@
+<h2>Gestió d'Activitats</h2>
+<div>
+    <form #activityForm="ngForm" (ngSubmit)="addActivity()">
+        <label for="name">Nom de l'Activitat:</label>
+        <input type="text" id="name" [(ngModel)]="newActivity.name" name="name" required>
+
+        <label for="date">Data:</label>
+        <input type="date" id="date" [(ngModel)]="newActivity.date" name="date" required>
+
+        <label for="type">Tipus:</label>
+        <select id="type" [(ngModel)]="newActivity.type" name="type" required>
+            <option value="">Selecciona un tipus</option>
+            <option value="Talk">Talk</option>
+            <option value="Protest">Protest</option>
+            <option value="Concert">Concert</option>
+        </select>
+
+        <button type="submit">{{ isEditing ? 'Modificar' : 'Afegir' }} Activitat</button>
+        <button type="button" (click)="resetForm()">Cancel·lar</button>
+    </form>
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+</div>
+
+<h3>Lista d'Activitats</h3>
+<ul>
+    <li *ngFor="let activity of activities; let i = index">
+        {{ activity.name }} - {{ activity.date | date }} - {{ activity.type }}
+        <button (click)="prepareEdit(activity, i)">Modificar</button>
+        <button (click)="deleteActivity(activity._id)">Eliminar</button>
+    </li>
+</ul>

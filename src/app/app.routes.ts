@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { UserComponent } from './components/user/user.component';
 import { PostComponent } from './components/post/post.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ActivityComponent } from './components/activity/activity.component';
 
 
 export const routes: Routes = [
@@ -14,6 +15,7 @@ export const routes: Routes = [
     { path: 'user', component: UserComponent},
     { path: 'post', component: PostComponent},
     { path: 'navbar', component: NavbarComponent},
+    { path: 'activities', component: ActivityComponent},
     { path: '**', redirectTo: 'login' } 
 ];
 
